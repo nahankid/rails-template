@@ -27,8 +27,8 @@ gem "sass-rails"<%= gemfile_requirement("sass-rails") %>
 gem "secure_headers", "~> 3.0"
 gem "sidekiq", ">= 4.2.0"
 gem "turbolinks"<%= gemfile_requirement("turbolinks") || ', ">= 2.5.2"' %>
-gem "webpacker"<%= gemfile_requirement("webpacker") %>
-gem "jbuilder"<%= gemfile_requirement("jbuilder") || ', "~> 2.5"' %>
+gem "webpacker"
+gem "jbuilder", '~> 2.5'
 
 group :production, :staging do
   gem "postmark-rails"
