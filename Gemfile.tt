@@ -100,7 +100,6 @@ group :development do
   gem "xray-rails", ">= 0.1.18"
 
   gem 'railroady'
-  gem 'quiet_assets'
   gem 'hirb'
 end
 
@@ -117,5 +116,4 @@ group :test do
   gem 'shoulda-matchers'
   gem 'timecop'
   gem 'database_cleaner'
-
 end
