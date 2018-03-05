@@ -1,4 +1,5 @@
 # This has to come first
+require "simplecov"
 require_relative "./support/rails"
 
 # Load everything else from test/support

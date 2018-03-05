@@ -30,14 +30,8 @@ gem 'sidekiq-statistic'
 gem 'sidekiq-failures'
 
 gem "turbolinks"<%= gemfile_requirement("turbolinks") || ', ">= 2.5.2"' %>
-gem "webpacker"<%= gemfile_requirement("webpacker") %>
 gem "jbuilder"<%= gemfile_requirement("jbuilder") || ', "~> 2.5"' %>
 gem 'font-awesome-rails'
-
-gem 'rack-mini-profiler', require: false
-gem 'ruby-prof'
-gem 'stackprof', require: false
-gem 'memory_profiler', require: false
 
 group :production, :staging do
   gem "postmark-rails"
@@ -84,7 +78,6 @@ group :development do
   gem "rbnacl", "~> 3.4", :require => false
   gem "rbnacl-libsodium", :require => false
   gem "rubocop", ">= 0.50.0", :require => false
-  gem "simplecov", :require => false
   gem "spring"
   gem "sshkit", "~> 1.16", :require => false
 <% if gemfile_requirement("spring-watcher-listen") -%>
@@ -108,10 +101,11 @@ group :test do
   gem "mocha"
   gem "selenium-webdriver"<%= gemfile_requirement("selenium-webdriver") %>
   gem "shoulda-context"
-
-  gem 'factory_girl_rails'
-  gem 'shoulda'
   gem 'shoulda-matchers'
   gem 'timecop'
-  gem 'database_cleaner'
+end
+
+group :development, :test do
+  gem 'factory_bot_rails'
+  gem "simplecov", :require => false
 end

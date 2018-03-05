@@ -89,8 +89,5 @@ Style/HashSyntax:
 Style/NumericPredicate:
   Enabled: false
 
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
-
 Style/TrivialAccessors:
   AllowPredicates: true
